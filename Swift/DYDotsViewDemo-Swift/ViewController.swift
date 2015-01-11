@@ -15,6 +15,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         var dots = DYDotsView(frame: CGRectMake(0, 0, 300, 300))
+        dots.numberOfDots = 5
+//        dots.duration = 0.4
         dots.backgroundColor = .clearColor()
         dots.dotsColor = .redColor()
         dots.startAnimating()

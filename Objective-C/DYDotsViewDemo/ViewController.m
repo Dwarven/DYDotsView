@@ -21,6 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     DYDotsView * dots = [[DYDotsView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+    [dots setNumberOfDots:@5];
+//    [dots setDuration:@0.4];
     [dots setBackgroundColor:[UIColor clearColor]];
     [dots setDotsColor:[UIColor redColor]];
     [dots startAnimating];

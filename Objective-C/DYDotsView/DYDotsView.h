@@ -11,6 +11,8 @@
 @interface DYDotsView : UIView
 
 @property(nonatomic, strong) UIColor * dotsColor;
+@property(nonatomic, strong) NSNumber * numberOfDots;
+@property(nonatomic, strong) NSNumber * duration;
 
 - (void)startAnimating;
 - (void)stopAnimating;

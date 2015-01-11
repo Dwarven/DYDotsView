@@ -30,41 +30,15 @@
 
 @implementation DYDotsView
 
-- (void)setDotsColor:(UIColor *)dotsColor{
-    _dotsColor = dotsColor;
-    [self buildView];
-}
-
-- (id)init{
-    self = [super init];
-    if (self) {
-        [self buildView];
-    }
-    return self;
-}
-
-- (id)initWithFrame:(CGRect)frame{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self buildView];
-    }
-    return self;
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder{
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        [self buildView];
-    }
-    return self;
-}
-
 - (void)buildView{
     self.layer.cornerRadius = self.bounds.size.width/2;
     for (id subview in self.subviews) {
         [subview removeFromSuperview];
     }
     CGFloat numberDots = 3;
+    if (_numberOfDots) {
+        numberDots = _numberOfDots.floatValue;
+    }
     CGFloat width = self.bounds.size.width/(numberDots + 1);
     CGFloat margin = (self.bounds.size.width - (width * numberDots)) / 1.3;
     CGFloat dotDiameter = width/3;
@@ -82,12 +56,17 @@
 }
 
 - (void)startAnimating{
+    [self buildView];
     int i = 0;
     for (DYDotView * dot in self.subviews) {
         if ([dot isKindOfClass:[DYDotView class]]) {
             dot.transform = CGAffineTransformMakeScale(0.01, 0.01);
             CGFloat delay = 0.1 * i;
-            [UIView animateWithDuration:0.5
+            double duration = 0.5;
+            if (_duration) {
+                duration = _duration.doubleValue;
+            }
+            [UIView animateWithDuration:duration
                                   delay:delay
                                 options:UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionRepeat|UIViewAnimationOptionAutoreverse
                              animations:^{
@@ -105,6 +84,7 @@
         if ([dot isKindOfClass:[DYDotView class]]) {
             dot.transform = CGAffineTransformMakeScale(1, 1);
             [dot.layer removeAllAnimations];
+            [dot removeFromSuperview];
         }
     }
 }
