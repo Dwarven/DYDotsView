@@ -3,6 +3,7 @@ A simple view that show pulsing dots for Objective-C and Swift.
 
 How to use 
 ---
+Objective-C
 ```obj-c
     #import "DYDotsView.h"
     DYDotsView * dots = [[DYDotsView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
@@ -16,7 +17,7 @@ How to use
     
     [dots stopAnimating];
 ```
-
+Swift
 ``` swift 
      var dots = DYDotsView(frame: CGRectMake(0, 0, 300, 300))
      dots.numberOfDots = 5
