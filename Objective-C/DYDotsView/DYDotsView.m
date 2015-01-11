@@ -35,6 +35,14 @@
     [self buildView];
 }
 
+- (id)init{
+    self = [super init];
+    if (self) {
+        [self buildView];
+    }
+    return self;
+}
+
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {

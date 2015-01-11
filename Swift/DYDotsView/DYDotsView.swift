@@ -36,6 +36,11 @@ class DYDotsView: UIView {
         buildView()
     }
     
+    override init() {
+        super.init()
+        buildView()
+    }
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         buildView()
