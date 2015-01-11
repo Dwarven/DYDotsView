@@ -1,6 +1,6 @@
 //
-//  DYDotsViewDemoTests.swift
-//  DYDotsViewDemoTests
+//  DYDotsViewDemo_SwiftTests.swift
+//  DYDotsViewDemo-SwiftTests
 //
 //  Created by Dwarven on 15/1/11.
 //  Copyright (c) 2015年 Dwarven. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class DYDotsViewDemoTests: XCTestCase {
+class DYDotsViewDemo_SwiftTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

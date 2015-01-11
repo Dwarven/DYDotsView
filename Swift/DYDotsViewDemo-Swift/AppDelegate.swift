@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  DYDotsViewDemo
+//  DYDotsViewDemo-Swift
 //
 //  Created by Dwarven on 15/1/11.
 //  Copyright (c) 2015年 Dwarven. All rights reserved.

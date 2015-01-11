@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Swift/DYDotsViewDemo.xcodeproj">
+      location = "group:Objective-C/DYDotsViewDemo.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Objective-C/DYDotsViewDemo.xcodeproj">
+      location = "group:Swift/DYDotsViewDemo-Swift.xcodeproj">
    </FileRef>
 </Workspace>
