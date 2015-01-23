@@ -14,6 +14,7 @@ private class DYDotView: UIView {
     var diameter:CGFloat = CGFloat(1)
     
     override func drawRect(rect: CGRect) {
+        super.drawRect(rect)
         let context = UIGraphicsGetCurrentContext()
         self.fillColor.setFill()
         CGContextAddEllipseInRect(context,(CGRectMake (0, 0, diameter, diameter)))
