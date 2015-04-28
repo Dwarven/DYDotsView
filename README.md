@@ -15,7 +15,7 @@ Objective-C
     [dots setCenter:self.view.center];
     [self.view addSubview:dots];
     
-    [dots stopAnimating];
+    //[dots stopAnimating];
 ```
 Swift
 ``` swift 
@@ -28,5 +28,5 @@ Swift
      dots.center = self.view.center
      self.view.addSubview(dots)
      
-     dots.stopAnimating()
+     //dots.stopAnimating()
 ```
