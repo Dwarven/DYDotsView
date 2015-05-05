@@ -41,8 +41,6 @@ class DYDotsView: UIView {
     }
     
     private func buildView() {
-        self.layer.cornerRadius = self.bounds.size.width/2;
-        
         for subview in self.subviews {
             subview.removeFromSuperview()
         }
@@ -66,7 +64,7 @@ class DYDotsView: UIView {
     func startAnimating() {
         buildView()
         var i:Int = 0
-        for dot in self.subviews as [DYDotView] {
+        for dot in self.subviews as! [DYDotView] {
             dot.transform = CGAffineTransformMakeScale(0.01, 0.01);
             let delay = 0.1*Double(i)
             UIView.animateWithDuration(Double(self.duration.doubleValue), delay:delay, options: UIViewAnimationOptions.CurveEaseInOut|UIViewAnimationOptions.Repeat|UIViewAnimationOptions.Autoreverse , animations: { () -> Void in
@@ -79,7 +77,7 @@ class DYDotsView: UIView {
     
     
     func stopAnimating() {
-        for dot in self.subviews as [DYDotView] {
+        for dot in self.subviews as! [DYDotView] {
             dot.transform = CGAffineTransformMakeScale(1, 1);
             dot.layer.removeAllAnimations()
             dot.removeFromSuperview()

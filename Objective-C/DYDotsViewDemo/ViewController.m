@@ -19,11 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    DYDotsView * dots = [[DYDotsView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+    
+    DYDotsView * dots = [[DYDotsView alloc] initWithFrame:CGRectMake(0, 0, 200, 20)];
     [dots setNumberOfDots:@5];
 //    [dots setDuration:@0.4];
-    [dots setBackgroundColor:[UIColor clearColor]];
     [dots setDotsColor:[UIColor redColor]];
     [dots startAnimating];
     [dots setCenter:self.view.center];
@@ -34,7 +33,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

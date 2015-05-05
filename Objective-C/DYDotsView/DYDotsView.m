@@ -32,7 +32,6 @@
 @implementation DYDotsView
 
 - (void)buildView{
-    self.layer.cornerRadius = self.bounds.size.width/2;
     for (id subview in self.subviews) {
         [subview removeFromSuperview];
     }
