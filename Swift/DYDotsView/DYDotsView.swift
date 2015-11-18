@@ -18,7 +18,7 @@ private class DYDotView: UIView {
         let context = UIGraphicsGetCurrentContext()
         self.fillColor.setFill()
         CGContextAddEllipseInRect(context,(CGRectMake (0, 0, diameter, diameter)))
-        CGContextDrawPath(context, kCGPathFill)
+        CGContextDrawPath(context, CGPathDrawingMode.Fill)
         CGContextStrokePath(context)
     }
 }
@@ -32,7 +32,7 @@ class DYDotsView: UIView {
     
     var duration:NSNumber = 0.5
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -44,14 +44,14 @@ class DYDotsView: UIView {
         for subview in self.subviews {
             subview.removeFromSuperview()
         }
-        var numberDots = CGFloat(self.numberOfDots.floatValue)
+        let numberDots = CGFloat(self.numberOfDots.floatValue)
         let width = (self.bounds.size.width)/(numberDots+1)
         let margin = (self.bounds.size.width - (width * numberDots)) / 1.3
         let dotDiameter = width/3
         var frame = CGRectMake(margin, self.bounds.size.height/2 - dotDiameter/2, dotDiameter, dotDiameter);
         
-        for i in 0...Int(numberDots-1) {
-            var dot = DYDotView(frame: frame)
+        for _ in 0...Int(numberDots-1) {
+            let dot = DYDotView(frame: frame)
             dot.diameter = frame.size.width;
             dot.fillColor = self.dotsColor;
             dot.backgroundColor = UIColor.clearColor()
@@ -67,7 +67,7 @@ class DYDotsView: UIView {
         for dot in self.subviews as! [DYDotView] {
             dot.transform = CGAffineTransformMakeScale(0.01, 0.01);
             let delay = 0.1*Double(i)
-            UIView.animateWithDuration(Double(self.duration.doubleValue), delay:delay, options: UIViewAnimationOptions.CurveEaseInOut|UIViewAnimationOptions.Repeat|UIViewAnimationOptions.Autoreverse , animations: { () -> Void in
+            UIView.animateWithDuration(Double(self.duration.doubleValue), delay:delay, options: [UIViewAnimationOptions.CurveEaseInOut, UIViewAnimationOptions.Repeat, UIViewAnimationOptions.Autoreverse] , animations: { () -> Void in
                 dot.transform = CGAffineTransformMakeScale(1, 1);
                 }, completion: nil)
             

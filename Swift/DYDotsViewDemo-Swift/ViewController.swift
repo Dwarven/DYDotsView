@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var dots = DYDotsView(frame: CGRectMake(0, 0, 300, 30))
+        let dots = DYDotsView(frame: CGRectMake(0, 0, 300, 30))
         dots.numberOfDots = 5
 //        dots.duration = 0.4
         dots.dotsColor = .redColor()
