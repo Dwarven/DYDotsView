@@ -71,7 +71,7 @@ class DYDotsView: UIView {
                 dot.transform = CGAffineTransformMakeScale(1, 1);
                 }, completion: nil)
             
-            i++;
+            i += 1;
         }
     }
     
