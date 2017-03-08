@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name                  = 'DYDotsView'
-  s.version               = '0.0.2'
+  s.version               = '1.0.0'
   s.summary               = 'A simple view that show pulsing dots.'
   s.homepage              = 'https://github.com/Dwarven/DYDotsView'
   s.ios.deployment_target = '7.0'
