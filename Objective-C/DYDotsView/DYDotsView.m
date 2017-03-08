@@ -3,7 +3,7 @@
 //  DYDotsViewDemo
 //
 //  Created by Dwarven on 15/1/10.
-//  Copyright (c) 2015年 Dwarven. All rights reserved.
+//  Copyright (c) 2015 Dwarven. All rights reserved.
 //
 
 #import "DYDotsView.h"
