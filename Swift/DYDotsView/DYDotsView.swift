@@ -67,7 +67,7 @@ class DYDotsView: UIView {
         for dot in self.subviews as! [DYDotView] {
             dot.transform = CGAffineTransform(scaleX: 0.01, y: 0.01);
             let delay = 0.1*Double(i)
-            UIView.animate(withDuration: Double(self.duration.doubleValue), delay:delay, options: [UIViewAnimationOptions.repeat, UIViewAnimationOptions.autoreverse] , animations: { () -> Void in
+            UIView.animate(withDuration: Double(self.duration.doubleValue), delay:delay, options: [UIView.AnimationOptions.repeat, UIView.AnimationOptions.autoreverse] , animations: { () -> Void in
                 dot.transform = CGAffineTransform(scaleX: 1, y: 1);
                 }, completion: nil)
             
